@@ -1,6 +1,6 @@
-import gsap from "gsap";
+import gsap, { Bounce } from "gsap";
 import { ScrollTrigger } from "gsap/all";
-import { useEffect, useRef } from "react";
+import { forwardRef, useEffect, useRef } from "react";
 
 const Solutions = () => {
   const dot1 = useRef();
@@ -8,7 +8,35 @@ const Solutions = () => {
   const dot3 = useRef();
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
-    const context = gsap.context(() => {});
+    const context = gsap.context(() => {
+      gsap.to(dot1.current, {
+        scrollTrigger: {
+          trigger: dot1.current,
+          start: "top 90%",
+        },
+        scale: 1,
+        duration: 0.7,
+        ease: Bounce.easeOut,
+      });
+      gsap.to(dot2.current, {
+        scrollTrigger: {
+          trigger: dot2.current,
+          start: "top 90%",
+        },
+        scale: 1,
+        duration: 0.7,
+        ease: Bounce.easeOut,
+      });
+      gsap.to(dot3.current, {
+        scrollTrigger: {
+          trigger: dot3.current,
+          start: "top 90%",
+        },
+        scale: 1,
+        duration: 0.7,
+        ease: Bounce.easeOut,
+      });
+    });
     return () => {
       context.revert();
     };
@@ -46,6 +74,7 @@ const Solutions = () => {
             </p>
           </div>
           <Dot
+            ref={dot1}
             classes={
               "lg:col-auto col-start-1 col-end-2 row-start-1 row-end-2 lg:row-auto"
             }
@@ -68,6 +97,7 @@ const Solutions = () => {
           </div>
 
           <Dot
+            ref={dot2}
             classes={
               "lg:col-auto col-start-1 col-end-2 row-start-2 row-end-3 lg:row-auto"
             }
@@ -107,6 +137,7 @@ const Solutions = () => {
             </p>
           </div>
           <Dot
+            ref={dot3}
             noLine
             classes={
               "lg:col-auto col-start-1 col-end-2 row-start-3 row-end-4 lg:row-auto"
@@ -128,7 +159,7 @@ const Solutions = () => {
 
 export default Solutions;
 
-const Dot = ({ noLine, classes }) => {
+const Dot = forwardRef(({ noLine, classes }, ref) => {
   return (
     <div className={`relative h-full ${classes}`}>
       {!noLine && (
@@ -136,8 +167,11 @@ const Dot = ({ noLine, classes }) => {
       )}
 
       <div className="w-full aspect-square bg-[#FFFFFF1F] rounded-full border-2 border-solid border-[#FFFFFF21] flex justify-center items-center">
-        <div className="bg-cyan w-[23px] lg:w-[35px] rounded-full aspect-square"></div>
+        <div
+          ref={ref}
+          className="scale-0 bg-cyan w-[23px] lg:w-[35px] rounded-full aspect-square"
+        ></div>
       </div>
     </div>
   );
-};
+});
