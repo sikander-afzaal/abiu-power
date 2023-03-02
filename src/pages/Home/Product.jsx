@@ -5,7 +5,7 @@ const Product = () => {
         <div className="w-full py-[50px] bg-greenGr flex justify-center items-center lg:rounded-br-[30px] lg:rounded-tr-[30px] mid:rounded-tl-[30px] mid:rounded-bl-[30px]">
           <img
             src="/phone.webp"
-            className="max-w-[180px] h-auto w-full lg:max-w-[260px] lg:drop-shadow-phone object-contain"
+            className="overflow-visible max-w-[180px] h-auto w-full lg:max-w-[260px] lg:drop-shadow-phone object-contain"
             alt=""
           />
         </div>
