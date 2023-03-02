@@ -1,4 +1,19 @@
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/all";
+import { useEffect, useRef } from "react";
+
 const Solutions = () => {
+  const dot1 = useRef();
+  const dot2 = useRef();
+  const dot3 = useRef();
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    const context = gsap.context(() => {});
+    return () => {
+      context.revert();
+    };
+  }, []);
+
   return (
     <div className="wrapper mt-[100px] sm:mt-[150px] relative">
       <div className="absolute top-0 -translate-y-1/2 right-0 translate-x-1/2 bg-[#FFFFFF17] blur-[125px] rounded-full aspect-square w-full max-w-[795px] -z-10 pointer-events-none"></div>

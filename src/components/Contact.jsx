@@ -1,6 +1,8 @@
-import { useState } from "react";
+import gsap from "gsap";
+import { useEffect, useRef, useState } from "react";
 
 const Contact = () => {
+  const imgRef = useRef();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -12,6 +14,20 @@ const Contact = () => {
       return { ...prev, [name]: value };
     });
   };
+
+  useEffect(() => {
+    const context = gsap.context(() => {
+      gsap.fromTo(
+        imgRef.current,
+        { y: 10 },
+        { y: -10, yoyo: true, repeat: -1, duration: 3 }
+      );
+    }, [imgRef.current]);
+    return () => {
+      context.revert();
+    };
+  }, []);
+
   return (
     <div id="contact" className="wrapper mt-[40px] sm:mt-[60px] lg:mt-[120px]">
       <div className="contain lg:flex-row flex-col-reverse justify-between items-center lg:gap-6">
@@ -43,6 +59,7 @@ const Contact = () => {
           <button className="cta-btn uppercase">Submit</button>
         </form>
         <img
+          ref={imgRef}
           src="/contact-img.png"
           className="max-w-[500px] xl:max-w-[600px] object-contain w-full"
           alt=""
