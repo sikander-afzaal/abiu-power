@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .wrapper {
+    @apply w-full flex-col flex justify-start items-center;
+  }
+  .contain {
+    @apply flex w-[90%] max-w-[1200px];
+  }
+  body {
+    @apply bg-[#000A11];
+  }
+}
+@layer components {
+  .title {
+    @apply font-semibold text-[25px] sm:text-[35px]  xl:text-[40px] leading-[1.42] text-white;
+  }
+  .para {
+    @apply text-white font-medium text-base sm:text-lg opacity-60 leading-[1.46];
+  }
+  .cta-btn {
+    @apply bg-cyan shadow-shadow1 rounded-[10px] px-9 py-4 border border-solid border-cyan hover:bg-transparent hover:text-white transition-all duration-300 text-dark font-semibold;
+  }
+  .cta-inverse {
+    @apply bg-white shadow-shadow1 rounded-[10px] px-9 py-4 border border-solid border-white hover:bg-transparent hover:text-white transition-all duration-300 text-cyan font-semibold;
+  }
+}
+html {
+  overflow-x: hidden;
+}
