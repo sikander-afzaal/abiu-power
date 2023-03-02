@@ -27,8 +27,8 @@ module.exports = {
         shadow1: "10px 10px 20px rgba(0, 0, 0, 0.25)",
       },
       backgroundImage: {
-        aboutBg: 'url("/about-bg.png")',
-        heroBg: 'url("/hero_img.png")',
+        aboutBg: 'url("/about-bg.webp")',
+        heroBg: 'url("/hero_img.webp")',
         phoneShadow:
           "linear-gradient(135.09deg, rgba(0, 0, 0, 0.35) 2.14%, rgba(0, 0, 0, 0) 44.68%)",
         greenGr: "linear-gradient(233.15deg, #43E2A0 -26.56%, #24A46F 99.9%)",
