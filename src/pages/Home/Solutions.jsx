@@ -1,6 +1,8 @@
 const Solutions = () => {
   return (
-    <div className="wrapper mt-[100px] sm:mt-[150px]">
+    <div className="wrapper mt-[100px] sm:mt-[150px] relative">
+      <div className="absolute top-0 -translate-y-1/2 right-0 translate-x-1/2 bg-[#FFFFFF17] blur-[125px] rounded-full aspect-square w-full max-w-[795px] -z-10 pointer-events-none"></div>
+      <div className="absolute bottom-0 left-0 -translate-x-1/2 bg-[#FFFFFF17] blur-[125px] rounded-full aspect-square w-full max-w-[795px] -z-10 pointer-events-none"></div>
       <div className="contain flex-col justify-center items-center gap-5">
         <div className="flex justify-center items-center flex-col text-center gap-3">
           <h2 className="title">Headline for Solutions</h2>

@@ -31,11 +31,13 @@ const Header = () => {
         ></div>
       )}
       <div className="contain py-5 justify-between items-center">
-        <img
-          src="/logo.png"
-          className="object-contain w-[64px] drop-shadow-shadow1"
-          alt=""
-        />
+        <Link to={"/"}>
+          <img
+            src="/logo.png"
+            className="object-contain w-[64px] drop-shadow-shadow1"
+            alt=""
+          />
+        </Link>
         <nav
           className={`flex z-[90] sm:flex-row flex-col py-[7rem] px-[3rem] sm:p-0 overflow-y-auto sm:overflow-visible bg-dark sm:bg-transparent h-full sm:h-auto w-full max-w-[420px] sm:w-auto sm:max-w-none justify-start sm:justify-end  items-center gap-8 sm:gap-5 transition-all duration-1000 sm:static fixed top-0   ${
             headerToggle ? "right-0" : "-right-[700px]"
@@ -48,13 +50,13 @@ const Header = () => {
           >
             About Us
           </Link>
-          <Link
+          <a
             onClick={() => setHeaderToggle(false)}
-            to={"/about"}
+            href={"#contact"}
             className="text-white text-xl sm:text-base"
           >
             Contact Us
-          </Link>
+          </a>
           <button onClick={() => setHeaderToggle(false)} className="cta-btn">
             Book a Demo
           </button>

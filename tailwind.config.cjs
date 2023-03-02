@@ -27,6 +27,7 @@ module.exports = {
         shadow1: "10px 10px 20px rgba(0, 0, 0, 0.25)",
       },
       backgroundImage: {
+        aboutBg: 'url("/about-bg.png")',
         heroBg: 'url("/hero_img.png")',
         phoneShadow:
           "linear-gradient(135.09deg, rgba(0, 0, 0, 0.35) 2.14%, rgba(0, 0, 0, 0) 44.68%)",

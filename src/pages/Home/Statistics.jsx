@@ -1,6 +1,7 @@
 const Statistics = () => {
   return (
-    <div className="wrapper mt-[100px] sm:mt-[150px]">
+    <div className="wrapper mt-[100px] sm:mt-[150px] relative">
+      <div className="absolute -top-1/2 right-0 translate-x-1/2 bg-[#FFFFFF17] blur-[125px] rounded-full aspect-square w-full max-w-[795px] -z-10 pointer-events-none"></div>
       <div className="contain flex-col justify-center items-center gap-10">
         <h2 className="title">Statistics Title</h2>
         <div className="grid grid-cols-1 lg:grid-cols-3 w-full gap-6 place-items-center ">

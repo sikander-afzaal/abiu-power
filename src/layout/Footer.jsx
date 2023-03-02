@@ -4,14 +4,20 @@ const Footer = () => {
   return (
     <footer className="wrapper mt-[140px]">
       <div className="contain sm:flex-row flex-col sm:gap-0 gap-8 justify-between items-center border-t-2 border-solid border-[#FFFFFF2B] py-[20px]">
-        <img src="/logo.png" className="w-[64px] drop-shadow-shadow1" alt="" />
+        <Link to={"/"}>
+          <img
+            src="/logo.png"
+            className="w-[64px] drop-shadow-shadow1"
+            alt=""
+          />
+        </Link>
         <div className="flex justify-center items-center gap-4">
           <Link to={"/about"} className="text-white">
             About Us
           </Link>
-          <Link to={"/about"} className="text-white">
+          <a href={"#contact"} className="text-white">
             Contact Us
-          </Link>
+          </a>
         </div>
         <div className="flex justify-center items-center gap-6">
           <a href="#" target={"blank"}>

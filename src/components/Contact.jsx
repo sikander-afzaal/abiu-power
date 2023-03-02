@@ -13,7 +13,7 @@ const Contact = () => {
     });
   };
   return (
-    <div className="wrapper mt-[40px] sm:mt-[60px] lg:mt-[120px]">
+    <div id="contact" className="wrapper mt-[40px] sm:mt-[60px] lg:mt-[120px]">
       <div className="contain lg:flex-row flex-col-reverse justify-between items-center lg:gap-6">
         <form className="w-full max-w-[510px] flex-col items-center lg:items-start justify-start gap-5 flex">
           <h2 className="title">Contact Us</h2>

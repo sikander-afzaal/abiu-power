@@ -28,6 +28,11 @@
     @apply bg-white shadow-shadow1 rounded-[10px] px-9 py-4 border border-solid border-white hover:bg-transparent hover:text-white transition-all duration-300 text-cyan font-semibold;
   }
 }
+body {
+  overflow-x: hidden;
+}
 html {
   overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
 }
