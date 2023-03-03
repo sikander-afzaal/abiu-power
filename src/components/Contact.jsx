@@ -32,10 +32,7 @@ const Contact = () => {
 
   const submitHandler = async (e) => {
     e.preventDefault();
-    const res = await axios.post(
-      "https://sheet.best/api/sheets/0d062647-0462-45e1-a881-1fb35010ce9b",
-      formData
-    );
+    const res = await axios.post("https://sheet.bestundefined", formData);
     if (res.status === 200) {
       setModal(true);
       setFormData({
