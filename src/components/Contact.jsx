@@ -32,17 +32,18 @@ const Contact = () => {
 
   const submitHandler = async (e) => {
     e.preventDefault();
-    const res = await axios.post("https://sheet.bestundefined", formData);
-    if (res.status === 200) {
-      setModal(true);
-      setFormData({
-        name: "",
-        email: "",
-        message: "",
-      });
-    } else {
-      alert("Error Occured");
-    }
+    setModal(true);
+    // const res = await axios.post("https://sheet.bestundefined", formData);
+    // if (res.status === 200) {
+
+    //   setFormData({
+    //     name: "",
+    //     email: "",
+    //     message: "",
+    //   });
+    // } else {
+    //   alert("Error Occured");
+    // }
   };
 
   return (
