@@ -24,7 +24,9 @@ const Choose = () => {
             "
           />
         </div>
-        <button className="cta-btn">Book a Demo</button>
+        <a href="https://calendly.com/omale" target="_blank" rel="noreferrer">
+              <button className="cta-btn">Book a Demo</button>
+        </a>
       </div>
     </div>
   );

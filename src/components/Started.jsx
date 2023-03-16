@@ -9,7 +9,10 @@ const Started = () => {
         />
         <div className=" flex justify-start items-center text-center lg:text-left lg:items-start flex-col gap-5">
           <h2 className="title">Get Started Today</h2>
-          <button className="cta-inverse">Book a Demo</button>
+
+          <a href="https://calendly.com/omale" target="_blank" rel="noreferrer">
+              <button className="cta-btn">Book a Demo</button>
+          </a>
         </div>
       </div>
     </div>

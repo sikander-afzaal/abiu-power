@@ -22,7 +22,9 @@ const Choose = () => {
             desc="Lorem ipsum dolor sit amet consectetur. Nunc dui facilisi a ac felis egestas dignissim habitant fringilla. "
           />
         </div>
-        <button className="cta-btn">Book a Demo</button>
+        <a href="https://calendly.com/omale" target="_blank" rel="noreferrer">
+              <button className="cta-btn">Book a Demo</button>
+        </a>
       </div>
     </div>
   );

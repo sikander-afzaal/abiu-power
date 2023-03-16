@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 const Header = () => {
   const [headerToggle, setHeaderToggle] = useState(false);
@@ -33,8 +34,8 @@ const Header = () => {
       <div className="contain py-5 justify-between items-center">
         <Link to={"/"}>
           <img
-            src="/logo.png"
-            className="object-contain w-[64px] drop-shadow-shadow1"
+            src="/logo2.png"
+            className="object-contain w-[144px] drop-shadow-shadow1"
             alt=""
           />
         </Link>
@@ -48,18 +49,25 @@ const Header = () => {
             to={"/about"}
             className="text-white text-xl sm:text-base"
           >
-            About Us
+            About
           </Link>
-          <a
+          <HashLink
             onClick={() => setHeaderToggle(false)}
-            href={"#contact"}
+            to={"/#contact"}
             className="text-white text-xl sm:text-base"
           >
-            Contact Us
+            Get in touch
+          </HashLink>
+
+          <a href="https://calendly.com/omale" target="_blank" rel="noreferrer">
+            <button onClick={() => setHeaderToggle(false)} className="cta-btn">
+              Book a Demo
+            </button>
           </a>
-          <button onClick={() => setHeaderToggle(false)} className="cta-btn">
+
+          {/* <button onClick={() => setHeaderToggle(false)} className="cta-btn">
             Book a Demo
-          </button>
+          </button> */}
         </nav>
         {headerToggle ? (
           <svg

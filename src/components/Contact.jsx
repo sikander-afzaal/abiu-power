@@ -1,4 +1,3 @@
-import axios from "axios";
 import gsap from "gsap";
 import { useEffect, useRef, useState } from "react";
 
@@ -9,7 +8,9 @@ const Contact = () => {
     email: "",
     message: "",
   });
+
   const [modal, setModal] = useState(false);
+
   const inputHandler = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => {
@@ -35,7 +36,6 @@ const Contact = () => {
     setModal(true);
     // const res = await axios.post("https://sheet.bestundefined", formData);
     // if (res.status === 200) {
-
     //   setFormData({
     //     name: "",
     //     email: "",
@@ -50,7 +50,7 @@ const Contact = () => {
     <div id="contact" className="wrapper mt-[40px] sm:mt-[60px] lg:mt-[120px]">
       {modal && <Modal setModal={setModal} />}
       <div className="contain lg:flex-row flex-col-reverse justify-between items-center lg:gap-6">
-        <form
+      <form
           onSubmit={submitHandler}
           className="w-full max-w-[510px] flex-col items-center lg:items-start justify-start gap-5 flex"
         >
@@ -75,7 +75,7 @@ const Contact = () => {
             name="message"
             onChange={inputHandler}
             value={formData.message}
-            placeholder="Enter inquiry..."
+            placeholder="Type your messsage here"
             className="w-full border-2 pt-3 border-solid border-[#FFFFFF21] bg-[#FFFFFF0F] rounded-[10px] h-[115px] resize-none pl-3 text-[rgba(255,255,255,0.6)] text-base font-normal"
           ></textarea>
           <button className="cta-btn uppercase">Submit</button>
@@ -93,17 +93,17 @@ const Contact = () => {
 
 export default Contact;
 
+
+
 const Modal = ({ setModal }) => {
   useEffect(() => {
     const timeout = setTimeout(() => {
       setModal(false);
     }, 9000);
-
     return () => {
       clearTimeout(timeout);
     };
   }, []);
-
   return (
     <>
       <div
@@ -126,10 +126,38 @@ const Modal = ({ setModal }) => {
             d="M6 18L18 6M6 6l12 12"
           />
         </svg>
-
-        <h2 className="text-white leading-[1.2] text-center uppercase font-semibold text-[40px]">
-          Thanks for <br /> contacting us
+        <h2 className="text-white leading-[1.2] text-center font-semibold text-[40px]">
+          Thanks for contacting us.<br /> 
         </h2>
+        <div className="text-white leading-[1.2] text-center font-semibold text-[25px]">
+          We will reach out to you.</div>
+        <div className="text-white leading-[1.2] text-center font-semibold text-[20px]">
+          Follow our journey on 
+          <div className="flex justify-center items-center gap-6">
+          <a href="https://instagram.com/joinabiu" target={"blank"}>
+            <img
+              src="/instagram.png"
+              // className="w-[28px] object-contain"
+              alt=""
+            />
+          </a>
+          <a href="https://twitter.com/joinabiu" target={"blank"}>
+            <img
+              src="/twitter.png"
+              // className="w-[28px] object-contain"
+              alt=""
+            />
+          </a>
+          <a href="https://linkedin.com/in/joinabiu" target={"blank"}>
+            <img
+              src="/linkedin.png"
+              // className="w-[28px] object-contain"
+              alt=""
+            />
+          </a>
+          </div>
+          
+          </div>
       </div>
     </>
   );

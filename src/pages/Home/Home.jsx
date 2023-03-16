@@ -1,6 +1,7 @@
 import Choose from "./Choose";
 import Hero from "./Hero";
 import Product from "./Product";
+import ApiDemo from "./ApiDemo";
 import Solutions from "./Solutions";
 import Statistics from "./Statistics";
 import Contact from "../../components/Contact";
@@ -10,10 +11,11 @@ const Home = () => {
   return (
     <>
       <Hero />
-      <Product />
       <Solutions />
-      <Choose />
-      <Statistics />
+      <ApiDemo />
+      <Product />
+      {/* <Choose /> */}
+      {/* <Statistics /> */}
       <Contact />
       <Started />
     </>

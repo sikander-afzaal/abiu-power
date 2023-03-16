@@ -48,30 +48,25 @@ const Solutions = () => {
       <div className="absolute bottom-0 left-0 -translate-x-1/2 bg-[#FFFFFF17] blur-[125px] rounded-full aspect-square w-full max-w-[795px] -z-10 pointer-events-none"></div>
       <div className="contain flex-col justify-center items-center gap-5">
         <div className="flex justify-center items-center flex-col text-center gap-3">
-          <h2 className="title">Headline for Solutions</h2>
+          <h2 className="title">Sustainabilty API solutions in development.</h2>
           <p className="para max-w-[710px]">
-            Lorem ipsum dolor sit amet consectetur. Augue ac aenean tempor
+            {/* Lorem ipsum dolor sit amet consectetur. Augue ac aenean tempor
             pharetra sed luctus aliquet pharetra. In tincidunt gravida eu
-            scelerisque velit in.
+            scelerisque velit in. */}
           </p>
         </div>
         <div className="grid mt-[120px] grid-cols-[50px__1fr] lg:grid-cols-[1fr__81px__1fr] w-full gap-x-5 lg:gap-x-16 gap-y-[40px] lg:gap-y-[150px]">
           {/* row 1 starts here ------------------------ */}
           <div className="flex justify-center items-start flex-col gap-5 sm:mt-0 mt-2">
             <h3 className="text-white font-semibold text-2xl sm:text-[26px]">
-              Energy Efficiency
+              For Brands
             </h3>
             <p className="text-white opacity-60 sm:text-base text-sm">
-              Lorem ipsum dolor sit amet consectetur. Tristique lectus volutpat
-              enim eu condimentum risus odio. Lectus vitae egestas egestas est
-              ornare varius cras faucibus.
+            
+            Delight your costumers by embedding carbon emission metrics in their journey with you.
+            Secure REST API implementation with no transfer of personal data.
             </p>
-            <p className="text-white opacity-60 sm:text-base text-sm ">
-              Lorem ipsum dolor sit amet consectetur. Nunc dui facilisi a ac
-              felis egestas dignissim habitant fringilla. Nulla dapibus
-              fermentum egestas vitae turpis tempus at bibendum velit. Ultricies
-              eget.
-            </p>
+           
           </div>
           <Dot
             ref={dot1}
@@ -81,7 +76,7 @@ const Solutions = () => {
           />
           <div className="bg-[#FFFFFF12] lg:flex rounded-[43px] h-[280px] hidden justify-center items-center w-full">
             <img
-              src="/lamp.png"
+              src="/wallet.png"
               className="translate-x-7 -translate-y-7 object-contain max-w-full"
               alt=""
             />
@@ -104,37 +99,23 @@ const Solutions = () => {
           />
           <div className="flex justify-center items-start flex-col gap-5 sm:mt-0 mt-2">
             <h3 className="text-white font-semibold text-2xl sm:text-[26px]">
-              Supply chain
+              Transportation & Logistics
             </h3>
             <p className="text-white opacity-60 sm:text-base text-sm">
-              Lorem ipsum dolor sit amet consectetur. Tristique lectus volutpat
-              enim eu condimentum risus odio. Lectus vitae egestas egestas est
-              ornare varius cras faucibus.
-            </p>
-            <p className="text-white opacity-60 sm:text-base text-sm">
-              Lorem ipsum dolor sit amet consectetur. Nunc dui facilisi a ac
-              felis egestas dignissim habitant fringilla. Nulla dapibus
-              fermentum egestas vitae turpis tempus at bibendum velit. Ultricies
-              eget.
+            Turn your supply chain into a competitive advantage. 
+            Add accredited emissions calculations for each shipment, and meet customer demand for climate action in supply chains.
             </p>
           </div>
           {/* row 2 ends here ------------------------ */}
           {/* row 3 starts here ------------------------ */}
           <div className="flex justify-center items-start flex-col gap-5 sm:mt-0 mt-2">
             <h3 className="text-white font-semibold text-2xl sm:text-[26px]">
-              Finance
+              AI powered Analytics 
             </h3>
             <p className="text-white opacity-60 sm:text-base text-sm">
-              Lorem ipsum dolor sit amet consectetur. Tristique lectus volutpat
-              enim eu condimentum risus odio. Lectus vitae egestas egestas est
-              ornare varius cras faucibus.
+            Our APIs provides personalized recommendations that make it easy to make the most sustainable decisions.
             </p>
-            <p className="text-white opacity-60 sm:text-base text-sm">
-              Lorem ipsum dolor sit amet consectetur. Nunc dui facilisi a ac
-              felis egestas dignissim habitant fringilla. Nulla dapibus
-              fermentum egestas vitae turpis tempus at bibendum velit. Ultricies
-              eget.
-            </p>
+
           </div>
           <Dot
             ref={dot3}
@@ -145,7 +126,7 @@ const Solutions = () => {
           />
           <div className="bg-[#FFFFFF12] lg:flex rounded-[43px] h-[280px] hidden justify-center items-center w-full ">
             <img
-              src="/wallet.png"
+              src="/lamp.png"
               className="translate-x-7 -translate-y-12 object-contain max-w-full"
               alt=""
             />

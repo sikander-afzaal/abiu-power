@@ -6,8 +6,8 @@ const About = () => {
   return (
     <>
       <Hero />
-      <Choose />
-      <Contact />
+      {/* <Choose /> */}
+      {/* <Contact /> */}
       <Started />
     </>
   );
