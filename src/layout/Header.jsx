@@ -54,6 +54,7 @@ const Header = () => {
           <HashLink
             onClick={() => setHeaderToggle(false)}
             to={"/#contact"}
+            smooth
             className="text-white text-xl sm:text-base"
           >
             Get in touch
