@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 const Footer = () => {
   return (
@@ -15,18 +16,18 @@ const Footer = () => {
           <Link to={"/about"} className="text-white">
             About
           </Link>
-          <a href={"#contact"} className="text-white">
+          <HashLink to={"/#contact"} className="text-white">
             Get in touch
-          </a>
+          </HashLink>
         </div>
         <div className="flex justify-center items-center gap-6">
           <a href="https://instagram.com/joinabiu" target={"blank"}>
-              <img
-                src="/instagram.png"
-                className="w-[18px] object-contain"
-                alt=""
-              />
-            </a>
+            <img
+              src="/instagram.png"
+              className="w-[18px] object-contain"
+              alt=""
+            />
+          </a>
           <a href="#" target={"blank"}>
             <img
               src="/twitter.png"
@@ -48,10 +49,8 @@ const Footer = () => {
           hello@abiu.earth
           <br></br>
           345 6th street San Francisco, CA
+          <br></br>© 2023 All Rights Reserved
           <br></br>
-          © 2023 All Rights Reserved
-          <br></br>
-          
         </p>
       </div>
     </footer>
