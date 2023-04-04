@@ -1,7 +1,7 @@
 const Hero = () => {
   return (
     <div className="wrapper bg-cover lg:p-0 bg-aboutBg bg-center py-[200px] lg:min-h-screen">
-      <div className="contain sm:text-left text-center lg:min-h-screen  justify-center flex-col items-center sm:items-start gap-5 ">
+      <div className="contain sm:text-left text-left lg:min-h-screen  justify-center flex-col items-center sm:items-start gap-5 ">
         <h2 className="title max-w-[585px]">
           About Abiu
         </h2>

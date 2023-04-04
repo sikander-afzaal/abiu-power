@@ -1,10 +1,15 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
+import ReactGA from "react-ga";
 
 const Header = () => {
   const [headerToggle, setHeaderToggle] = useState(false);
   const [headerBg, setHeaderBg] = useState(false);
+  //tracking
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  });
+
   useEffect(() => {
     const setBg = () => {
       if (window.scrollY > 150) {
@@ -32,29 +37,49 @@ const Header = () => {
         ></div>
       )}
       <div className="contain py-5 justify-between items-center">
-        <Link to={"/"}>
+        <HashLink
+          onClick={() => {
+            setHeaderToggle(false);
+            React.useEffect(() => {
+              window.scrollTo(0, 0);
+            }, []);
+          }}
+          to={"/"}
+        >
           <img
             src="/logo2.png"
             className="object-contain w-[144px] drop-shadow-shadow1"
             alt=""
           />
-        </Link>
+        </HashLink>
         <nav
           className={`flex z-[90] sm:flex-row flex-col py-[7rem] px-[3rem] sm:p-0 overflow-y-auto sm:overflow-visible bg-dark sm:bg-transparent h-full sm:h-auto w-full max-w-[420px] sm:w-auto sm:max-w-none justify-start sm:justify-end  items-center gap-8 sm:gap-5 transition-all duration-1000 sm:static fixed top-0   ${
             headerToggle ? "right-0" : "-right-[700px]"
           }`}
         >
-          <Link
+          <HashLink
+            onClick={() => {
+              setHeaderToggle(false);
+              React.useEffect(() => {
+                window.scrollTo(0, 0);
+              }, []);
+            }}
+            to={"/"}
+            className="text-white text-xl sm:text-base"
+          >
+            Home
+          </HashLink>
+
+          <HashLink
             onClick={() => setHeaderToggle(false)}
             to={"/about"}
             className="text-white text-xl sm:text-base"
           >
             About
-          </Link>
+          </HashLink>
           <HashLink
             onClick={() => setHeaderToggle(false)}
             to={"/#contact"}
-            smooth
             className="text-white text-xl sm:text-base"
           >
             Get in touch

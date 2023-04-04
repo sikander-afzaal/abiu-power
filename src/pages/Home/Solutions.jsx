@@ -7,6 +7,7 @@ const Solutions = () => {
   const dot2 = useRef();
   const dot3 = useRef();
   useEffect(() => {
+    ScrollTrigger.config({ ignoreMobileResize: true });
     gsap.registerPlugin(ScrollTrigger);
     const context = gsap.context(() => {
       gsap.to(dot1.current, {
@@ -63,7 +64,7 @@ const Solutions = () => {
             </h3>
             <p className="text-white opacity-60 sm:text-base text-sm">
             
-            Delight your costumers by embedding carbon emission metrics in their journey with you.
+            Delight your customers by embedding carbon emission metrics in their journey with you.
             Secure REST API implementation with no transfer of personal data.
             </p>
            
